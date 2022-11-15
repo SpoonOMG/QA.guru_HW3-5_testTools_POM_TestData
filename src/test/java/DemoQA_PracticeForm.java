@@ -31,12 +31,11 @@ public class DemoQA_PracticeForm extends testData{
         $(By.cssSelector("[id=\"gender-radio-1\"]")).isSelected();
         $(By.cssSelector("[id=\"gender-radio-2\"]")).isSelected();
         $(By.cssSelector("[id=\"gender-radio-3\"]")).isSelected();
-        $x("//label[@for=\"gender-radio-1\"]").click();
+        $(withText("Male")).click();
         $x("//input[@placeholder='Mobile Number']").setValue(mobile);
         $x("//input[@id=\"dateOfBirthInput\"]").click();
         setCalendar("March","1993");
-        String catchedDate = $x("//input[@id=\"dateOfBirthInput\"]").getValue();
-        $x("//label[@for=\"hobbies-checkbox-1\"]").click();
+        $(withText("Sports")).click();
         $("[placeholder=\"Current Address\"]").setValue(address);
         $("[id=\"subjectsContainer\"]").click();
         $x("//input[@id=\"subjectsInput\"]").setValue("English").pressEnter();
