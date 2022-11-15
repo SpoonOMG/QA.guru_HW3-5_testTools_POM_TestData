@@ -1,18 +1,15 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.TextCheck;
-import com.codeborne.selenide.conditions.Text;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 
 import java.io.File;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class DemoQA_PracticeForm extends testData{
+public class DemoQAPracticeForm extends TestData {
 
     @BeforeEach
     void launchBrowserTest(){
@@ -28,13 +25,10 @@ public class DemoQA_PracticeForm extends testData{
         $("[id=firstName]").setValue(firstName);
         $("[id=lastName]").setValue(lastName);
         $("[id=userEmail]").setValue(email);
-        $(By.cssSelector("[id=\"gender-radio-1\"]")).isSelected();
-        $(By.cssSelector("[id=\"gender-radio-2\"]")).isSelected();
-        $(By.cssSelector("[id=\"gender-radio-3\"]")).isSelected();
         $(withText("Male")).click();
         $x("//input[@placeholder='Mobile Number']").setValue(mobile);
         $x("//input[@id=\"dateOfBirthInput\"]").click();
-        setCalendar("March","1993");
+        setCalendar("March","1993","02");
         $(withText("Sports")).click();
         $("[placeholder=\"Current Address\"]").setValue(address);
         $("[id=\"subjectsContainer\"]").click();

@@ -3,7 +3,7 @@ import com.github.javafaker.Faker;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class testData {
+public class TestData {
     Faker faker = new Faker();
 
     String name = faker.name().fullName(); // Miss Samanta Schmidt
@@ -18,10 +18,10 @@ public class testData {
     String state = "Haryana";
     String city = "Karnal";
 
-    public void setCalendar(String month, String year) {
+    public void setCalendar(String month, String year, String day) {
         $x("//select[@class=\"react-datepicker__month-select\"]").selectOption(month);
         $x("//select[@class=\"react-datepicker__year-select\"]").selectOption(year);
-        $x("//div[@class='react-datepicker__day react-datepicker__day--002']").click();
+        $x("//div[@class='react-datepicker__day react-datepicker__day--0"+day+"']").click();
     }
 
 
