@@ -1,7 +1,7 @@
-package testData;
+package testdata;
 
 import com.github.javafaker.Faker;
-import testData.listsOfExamples.Subject;
+import testdata.listsofexamples.Subject;
 
 import java.util.Random;
 

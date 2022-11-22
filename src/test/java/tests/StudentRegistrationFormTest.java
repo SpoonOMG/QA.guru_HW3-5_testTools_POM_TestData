@@ -2,10 +2,9 @@ package tests;
 
 import org.junit.jupiter.api.*;
 import pages.BasePage;
-import pages.components.CalendarComponents;
 import pages.components.RegistrationResultsModal;
-import pages.practiceForm.StudentRegistrationFormPage;
-import testData.TestData;
+import pages.practiceform.StudentRegistrationFormPage;
+import testdata.TestData;
 
 public class StudentRegistrationFormTest extends BasePage {
     StudentRegistrationFormPage studentRegistrationFormPage = new StudentRegistrationFormPage();
