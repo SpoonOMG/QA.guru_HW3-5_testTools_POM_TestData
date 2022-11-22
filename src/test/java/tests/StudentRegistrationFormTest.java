@@ -9,7 +9,6 @@ import testdata.TestData;
 public class StudentRegistrationFormTest extends BasePage {
     StudentRegistrationFormPage studentRegistrationFormPage = new StudentRegistrationFormPage();
     TestData testData = new TestData();
-    RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
 
     @Test
     void filledFormStudentRegistrationForm() {
