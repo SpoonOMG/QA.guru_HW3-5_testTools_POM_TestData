@@ -74,69 +74,83 @@ public class StudentRegistrationFormPage {
                         firstName.setValue(value);
                         return this;
                 };
+        
                 public StudentRegistrationFormPage setLastName(String value){
                         lastName.setValue(value);
                         return this;
                 };
+        
                 public StudentRegistrationFormPage setEmail(String value){
                         email.setValue(value);
                         return this;
                 };
+        
                 public StudentRegistrationFormPage selectGender(String genderRadioElement){
                         genderRadio.$(withText(genderRadioElement)).click();
                         return this;
                 };
+        
                 public StudentRegistrationFormPage setMobile(String mobilePhone){
                         mobile.setValue(mobilePhone);
                         return this;
-                }
+                };
+        
                 public StudentRegistrationFormPage setBirthDateField(String month, String year, String day){
                         birthDateField.click();
                         CalendarComponents.setCalendar(month,year,day);
                         return this;
-                }
+                };
+        
                 public StudentRegistrationFormPage setSubject(String value){
                         subjectFieldClick.click();
                         subjectFieldInputElement.setValue(value).pressEnter();
                         return this;
-                }
+                };
+        
                 public StudentRegistrationFormPage selectHobbies(String hobbiesCheckBoxElement){
                         hobbies.$(withText(hobbiesCheckBoxElement)).click();
                         return this;
-                }
+                };
+        
                 public StudentRegistrationFormPage setUploadPictureButton(String path){
                         uploadPictureButton.uploadFile(new File(path));
                         return this;
-                }
+                };
+        
                 public StudentRegistrationFormPage setCurrentAddress (String value){
                         currentAddress.setValue(value);
                         return this;
-                }
+                };
+        
                 public StudentRegistrationFormPage setState(String value){
                         state.click();
                         stateFieldInput.setValue(value).pressEnter();
                         return this;
                 };
+        
                 public StudentRegistrationFormPage setCity(String value){
                         city.click();
                         cityFieldInput.setValue(value).pressEnter().pressEnter();
                         return this;
                 };
+        
                 public StudentRegistrationFormPage submit(){
                         submitButton.click();
                         return this;
                 };
+        
                 // Actions with page
 
                 public StudentRegistrationFormPage openPage() {
                 open("/automation-practice-form");
                 $(withText("Practice Form")).shouldHave(Condition.text("Practice Form"));
                         return this;
-                }
+                };
+        
                 public StudentRegistrationFormPage scrollToElement(SelenideElement element){
                         element.scrollTo();
                         return this;
-                }
+                };
 
                 public StudentRegistrationFormPage verifyRegistrationForm(){
                 registrationFormElementsDisplayed();
@@ -148,10 +162,11 @@ public class StudentRegistrationFormPage {
                 public StudentRegistrationFormPage verifyResultModalAppears(){
                         registrationResultsModal.verifyModalAppears();
                         return this;
-                }
+                };
 
                 public StudentRegistrationFormPage verifyResults(String key, String value){
                         registrationResultsModal.verifyResult(key, value);
                         return this;
                         }
+        
 }
