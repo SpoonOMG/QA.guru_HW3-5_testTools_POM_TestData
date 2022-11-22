@@ -1,15 +1,11 @@
-package pages.practiceForm;
+package pages.practiceform;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
-import pages.BasePage;
 import pages.components.CalendarComponents;
 import pages.components.RegistrationResultsModal;
 
 import java.io.File;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;

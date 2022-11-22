@@ -1,6 +1,6 @@
 package pages.components;
 
-import testData.TestData;
+import testdata.TestData;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
