@@ -15,13 +15,9 @@ public class TestData {
     public String mobile = faker.phoneNumber().subscriberNumber(10);
     public String address = faker.address().fullAddress();
     public  String subject = subjectRandomizer();
-
     public String hobbies =hobbiesRandomizer();
-
-
     public String state = "Haryana";
     public String city = "Karnal";
-
     public String monthRandom = monthRandomizer();
     public String dayRandom = dayRandomizer();
     public String yearRandom = yearRandomizer();
@@ -29,8 +25,6 @@ public class TestData {
     public String gender = genderRandomizer();
     public String pictureSrc = "src/test/resources/mario03.png";
     public String pictureName = "mario03.png";
-
-
 
     // Кастомные рандомизаторы тестовых данных
     public static String subjectRandomizer(){
