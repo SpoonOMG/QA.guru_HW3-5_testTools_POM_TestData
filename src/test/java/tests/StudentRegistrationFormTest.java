@@ -17,7 +17,6 @@ public class StudentRegistrationFormTest extends BasePage {
     @Test
 
     void filledFormStudentRegistrationForm() {
-        SelenideLogger.addListener("allure",new AllureSelenide());
         step("Переходим в форму регистрации студентов и заполняем форму", ()->{
             studentRegistrationFormPage.openPage()
                     .verifyRegistrationForm()
