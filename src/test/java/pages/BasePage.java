@@ -17,16 +17,18 @@ public class BasePage {
     @BeforeAll
     static void selenoidConnection(){
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browserSize="2880x1800";
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", "true");
-        capabilities.setCapability("enableVideo", "true");
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
     }
     @BeforeEach
     void launchBrowserTest(){
         SelenideLogger.addListener("allure",new AllureSelenide());
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize="2880x1800";
+
         Selenide.clearBrowserCookies();
     };
     @AfterEach
